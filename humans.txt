@@ -1,0 +1,16 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Initiator: Mauritius Software Craftsmanship Community
+  Site: http://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/
+  Twitter: @MSCraftsman
+  Location: Mauritius
+
+/* THANKS */
+  Jochen Kirstätter - http://jochen.kirstaetter.name/
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, HTML5 Boilerplate, Bootstrap, AngularJS

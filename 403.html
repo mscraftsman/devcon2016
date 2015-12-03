@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forbidden - Developers Conference 2015 - Mauritius</title>
+    <meta name="description" content="The Developers Conference 2015 is a 3-day event going to take place between the 23rd and the 25th of April 2015.
+          The Mauritius Software Craftsmanship Community (MSCC) is going to organise this event in corporation with local and international sponsors and partners.">
+
+    <!-- Place favicon.ico and mscc-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/normalize.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="styles/kendoui/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendoui/kendo.default.min.css" />-->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+    <!-- All JavaScript at the bottom, except this Modernizr build.
+         Modernizr enables HTML5 elements & feature detects for optimal performance.
+         Create your own custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="libs/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="head-banner grid-100"></header>
+
+    <div ng-include="'./app/templates/header.html'"></div>
+
+    <a name="#"></a>
+
+    <div role="main">
+        <div class="container">
+            <h1>Forbidden <span>:(</span></h1>
+            <p>Sorry, but the page you were trying to view is not accessible.</p>
+            <p>It looks like this was the result of either:</p>
+            <ul>
+                <li>a mistyped address</li>
+                <li>an out-of-date link</li>
+            </ul>
+            <script>
+                var GOOG_FIXURL_LANG = (navigator.language || '').slice(0, 2), GOOG_FIXURL_SITE = location.host;
+            </script>
+            <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="pad">
+            <div id="copyright">
+                <p>
+                    <img src="img/mscc-touch-icon-48x48-fg.png" alt="Mauritius Software Craftsmanship Community" height="36" width="36" />
+                    <a href="http://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/" target="_blank">Mauritius Software Craftsmanship Community</a>
+                </p>
+            </div><!--/#copyright-->
+            <div id="nav-bottom">
+                <ul>
+                    <li><a href="" class="email obfuscated" data-email="info devconmru org">Contact Us</a></li>
+                    <li><a href="http://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/pages/Code_of_Conduct" target="_blank">Code of Conduct</a></li>
+                    <li><a href="https://twitter.com/MSCraftsman" target="_blank">Follow @MSCraftsman</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="libs/require/2.1.10/require.js" data-main="app/main"> </script>
+
+    <!-- Asynchronous Google Universal Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+         mathiasbynens.be/notes/async-analytics-snippet -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-12103827-8', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
