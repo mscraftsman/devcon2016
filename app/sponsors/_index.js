@@ -1,0 +1,6 @@
+﻿define([
+    './sponsorController',
+    './sponsorService'
+], function () {
+
+});

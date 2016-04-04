@@ -1,0 +1,26 @@
+﻿<ol class="list">
+    <li class="list-item list-item-agenda" ng-repeat="entry in entries">
+        <time class="time-slot">{{entry.gsx$time.$t}}</time>
+        <h3 class="time-info time-info-full">{{entry.gsx$title.$t}}<span class="muted"> - {{entry.gsx$speaker.$t}}</span></h3>
+    </li>
+</ol>
+
+<hr class="featurette-divider" id="proposal">
+<div class="featurette hidden">
+    <h2 class="featurette-heading">Current Proposals<br /><span class="muted"></span></h2>
+    <p class="lead">
+
+    </p>
+    <div class="proposal" ng-repeat="entry in entries">
+        <div class="proposal-image">
+            <a href="http://twitter.com/{{entry.gsx$twitter.$t}}" target="_blank"><img src="img/speakers/{{entry.gsx$image.$t}}" class="/"></a>
+        </div>
+        <div class="proposal-details">
+            <h2>{{entry.gsx$title.$t}}</h2>
+            <h3>{{entry.gsx$speaker.$t}}</h3>
+            <p>
+                {{entry.gsx$abstract.$t}}
+            </p>
+        </div>
+    </div>
+</div>

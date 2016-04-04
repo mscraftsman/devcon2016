@@ -1,0 +1,6 @@
+﻿define([
+    './extraController',
+    './extraService'
+], function () {
+
+});

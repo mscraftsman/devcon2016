@@ -1,0 +1,6 @@
+﻿define([
+    './indexController',
+    './indexService'
+], function () {
+
+});

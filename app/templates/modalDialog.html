@@ -1,0 +1,19 @@
+﻿<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="ok()" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">
+                {{modalOptions.entry.gsx$title.$t}}
+                <span class="ribbon {{modalOptions.entry.gsx$level.$t | lowercase}}">{{modalOptions.entry.gsx$level.$t}}</span>
+                <span class="language {{modalOptions.entry.gsx$language.$t | lowercase}}"></span>
+            </h4>
+            <p>{{modalOptions.entry.gsx$time.$t}} - {{modalOptions.entry.gsx$speaker.$t}}</p>
+        </div>
+        <div class="modal-body">
+            {{modalOptions.entry.gsx$abstract.$t}}
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="ok()">{{modalOptions.closeButtonText}}</button>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

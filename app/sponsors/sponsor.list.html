@@ -1,0 +1,16 @@
+﻿<hr class="featurette-divider hidden" id="sponsors">
+<div class="featurette hidden">
+    <h2 class="featurette-heading">Sponsors and Partners<br /><span class="muted">Thanks for their contribution</span></h2>
+    <ul class="thumbnails">
+        <li class="span4" ng-repeat="entry in entries">
+            <div class="thumbnail">
+                <img ng-src="img/sponsors/{{entry.gsx$image.$t}}" alt="{{entry.gsx$company.$t}}">
+                <h3>{{entry.gsx$company.$t}}</h3>
+                <p>{{entry.gsx$slogan.$t}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div ng-include="'./app/templates/sponsorship.html'"></div>
+<div ng-include="'./app/templates/mscc.html'"></div>

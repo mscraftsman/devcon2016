@@ -1,0 +1,19 @@
+﻿<hr class="featurette-divider" id="speakers">
+<div class="featurette hidden">
+    <h2 class="featurette-heading">The Speakers<br /><span class="muted"></span></h2>
+    <p class="lead">
+
+    </p>
+    <div class="proposal" ng-repeat="entry in entries">
+        <div class="proposal-image">
+            <a href="http://twitter.com/{{entry.gsx$twitter.$t}}" target="_blank"><img src="img/speakers/{{entry.gsx$image.$t}}" class="/"></a>
+        </div>
+        <div class="proposal-details">
+            <h2>{{entry.gsx$title.$t}}</h2>
+            <h3>{{entry.gsx$fullname.$t}}</h3>
+            <p>
+                {{entry.gsx$abstract.$t}}
+            </p>
+        </div>
+    </div>
+</div>

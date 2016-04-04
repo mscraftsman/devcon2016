@@ -1,0 +1,143 @@
+﻿        
+        <section class="row title-row fill-screen stellar-bg"
+                 style="background-image: url(img/DevCon2015.jpg)"
+                 data-stellar-background-ratio="0.2">
+
+                <!--<img class="img-responsive title-image" src="images/site-logo-white.png" alt="Rocky Mountain Outdoors Logo" />-->
+
+                <div class="down-button">
+                    <a class="btn" href="#front-speakers">
+                        <i class="fa fa-arrow-circle-down fa-4x"></i>
+                    </a>
+                </div>
+        </section>
+
+        <!--<section id="sights" class="row text-banner">
+            <h1>VISIT THE ROCKY MOUNTAINS</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+
+        <section id="sports" class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(images/elk.jpg)">
+            </div>
+        </section>
+
+        <section id="activities" class="row activity-section">
+            <div class="activity-element col-md-4">
+                <img src="images/map.png" />
+                <h2>Orienteering</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="activity-element col-md-4">
+                <img src="images/pic.png" />
+                <h2>Rock Climbing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div class="activity-element col-md-4">
+                <img src="images/backpack.png" />
+                <h2>Backpacking</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(images/snowboarder.jpg)">
+            </div>
+        </section>
+
+        <section id="contact-us" class="row contact-us">
+            <h1>CONTACT US</h1>
+            <h3>Somewhere in Colorado</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </section>-->
+
+<hr class="featurette-divider" id="front-speakers" ng-show="speakers.length > 0">
+<div class="featurette" ng-show="speakers.length > 0">
+    <h2 class="featurette-heading">Speakers<br /><span class="muted">You will be in good hands</span></h2>
+    <ul class="thumbnails center">
+        <li class="span4" ng-repeat="entry in speakers | orderBy:'gsx$fullname.$t'">
+            <div class="container-speaker ">
+                <img ng-hide="entry.gsx$twitter.$t" ng-src="img/speakers/{{entry.gsx$image.$t}}" alt="{{entry.gsx$fullname.$t}}" title="{{entry.gsx$fullname.$t}}" class="speaker-image no-twitter" />
+                <a ng-show="entry.gsx$twitter.$t" href="https://twitter.com/{{entry.gsx$twitter.$t}}" target="_blank">
+                    <img ng-src="img/speakers/{{entry.gsx$image.$t}}" alt="{{entry.gsx$fullname.$t}}" title="{{entry.gsx$fullname.$t}}" class="speaker-image" />
+                </a>
+                <h3>
+                    {{entry.gsx$fullname.$t}}
+                    <a ng-show="entry.gsx$link.$t" href="{{entry.gsx$link.$t}}" target="_blank" class="link"></a>
+                    <a ng-show="entry.gsx$linkedin.$t" href="{{entry.gsx$linkedin.$t}}" target="_blank" class="linkedin"></a>
+                    <a ng-show="entry.gsx$github.$t" href="{{entry.gsx$github.$t}}" target="_blank" class="github"></a>
+                </h3>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<hr class="featurette-divider" id="front-sponsors" ng-show="sponsors.length > 0">
+<div class="featurette" ng-show="sponsors.length > 0">
+    <h2 class="featurette-heading">Sponsors and Partners<br /><span class="muted">Thanks for their contribution</span></h2>
+    <ul class="thumbnails center">
+        <li class="span4" ng-repeat="entry in sponsors">
+            <div class="thumbnail" ng-class="{{entry.gsx$level.$t}}">
+                <a href="{{entry.gsx$url.$t}}/?utm_source=devconmru&utm_medium=banner&utm_campaign=sponsor" target="_blank"><img ng-src="img/sponsors/{{entry.gsx$image.$t}}" alt="{{entry.gsx$partner.$t}}" /></a>
+                <h3>{{entry.gsx$company.$t}}</h3>
+                <p>{{entry.gsx$slogan.$t}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<hr class="featurette-divider" id="front-jobs" ng-show="jobs.length > 0">
+<div class="featurette" ng-show="jobs.length > 0">
+    <h2 class="featurette-heading">Job listings<br /><span class="muted">Watch out for offers</span></h2>
+    <div ng-show="jobs.length == 0">Currently there are no active job listings... Stay tuned</div>
+    <ul>
+        <li ng-repeat="entry in jobs | orderBy:['gsx$companyemployer.$t','-gsx$timestamp.$t']">
+            <h3>
+                {{entry.gsx$companyemployer.$t}} -
+                <a href="{{entry.gsx$linktojoblisting.$t}}" target="_blank">
+                    {{entry.gsx$jobtitle.$t}}
+                </a>
+            </h3>
+        </li>
+    </ul>
+</div>
+
+<!--
+<hr class="featurette-divider" id="front-orgateam">
+<div class="featurette">
+        <h2 class="featurette-heading">Organisation Team<br /><span class="muted">Who's behind all this?</span></h2>
+        <ul class="thumbnails center">
+            <li class="span3" ng-repeat="entry in orgas">
+                <div class="thumbnail">
+                    <a href="https://twitter.com/{{entry.gsx$twitter.$t}}" target="_blank"><img ng-src="img/speakers/{{entry.gsx$image.$t}}" alt="{{entry.gsx$fullname.$t}}" /></a>
+                    <h3>{{entry.gsx$fullname.$t}}</h3>
+                </div>
+            </li>
+        </ul>
+</div>
+-->
+
+<hr class="featurette-divider">
+<div class="featurette">
+    <!--<img class="featurette-image pull-right img-circle fixed2" src="img/mscc-touch-icon-192x192.png" alt="" title="" />-->
+    <h2 class="featurette-heading">Developers Conference 2016<br /><span class="muted">Unique in Mauritius</span></h2>
+    <p>
+After last year's success the Mauritius Software Craftsmanship Community (MSCC) is organising the next annual event in partnership with a number of local and international companies. Although the MSCC was founded back in 2013 it quickly became clear that our tropical island has a certain lack of informational and technical events. During some monthly meetups we spoke about this situation and that it would be very interesting and delightful to organise such an event.
+    </p>
+    <p>
+        <blockquote><em>"From craftsmen - For craftsmen"</em></blockquote>
+    </p>
+    <p>
+Also, the monthly meetings of the MSCC are usually topic-centered and most amazingly we had solid technical information and good presenters - even though none is a professional trainer - during the last couple of month. The Developers Conference is just the consequent development of this process - our thirst for more information in the world of modern IT.
+    </p>
+    <p>
+Mauritius has been branded "Cyber Island" in the Indian Ocean... Opinions in those matters vary but with this conference we strive to improve the general attribution of our island. Mauritius has great political stability and economical advantages for foreign investors, and the most precious resource Mauritius has to offer is people's knowledge.
+The ICT sector in Mauritius is growing since years and maturing as the fourth pillar of our economy. With its geographical position Mauritius is also welcome as a business and knowledge hub between Africa and Asia.
+    </p>
+    <p>
+Welcome to the second Developers Conference in Mauritius!
+    <a ui-sref="propose"></a>
+</div>
+<hr class="featurette-divider">

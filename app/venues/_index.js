@@ -1,0 +1,6 @@
+﻿define([
+    './venueController',
+    './venueService'
+], function () {
+
+});
