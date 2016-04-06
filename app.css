@@ -961,6 +961,14 @@ span.language {
             font-size: 13px;
         }
 
+        
+ul.sponsor li {
+    list-style-image: url(../img/li-tick.png);
+    margin-left: 25px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
 .button, #past_editions, .ribbon {
     font-family: 'Roboto', sans-serif;
 }
