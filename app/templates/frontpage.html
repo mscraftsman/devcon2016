@@ -12,47 +12,6 @@
     </div>
 </section>
 
-<!--<section id="sights" class="row text-banner">
-    <h1>VISIT THE ROCKY MOUNTAINS</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</section>
-
-<section id="sports" class="row">
-    <div class="fill-screen fixed-attachment" style="background-image: url(images/elk.jpg)">
-    </div>
-</section>
-
-<section id="activities" class="row activity-section">
-    <div class="activity-element col-md-4">
-        <img src="images/map.png" />
-        <h2>Orienteering</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="activity-element col-md-4">
-        <img src="images/pic.png" />
-        <h2>Rock Climbing</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-    </div>
-    <div class="activity-element col-md-4">
-        <img src="images/backpack.png" />
-        <h2>Backpacking</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-    </div>
-</section>
-
-<section class="row">
-    <div class="fill-screen fixed-attachment" style="background-image: url(images/snowboarder.jpg)">
-    </div>
-</section>
-
-<section id="contact-us" class="row contact-us">
-    <h1>CONTACT US</h1>
-    <h3>Somewhere in Colorado</h3>
-    <p>Lorem ipsum dolor sit amet</p>
-    <p>Lorem ipsum dolor sit amet</p>
-    <p>Lorem ipsum dolor sit amet</p>
-</section>-->
-
 <hr class="featurette-divider" id="front-speakers" ng-show="speakers.length > 0">
 <div class="featurette" ng-show="speakers.length > 0">
     <h2 class="featurette-heading">Speakers<br /><span class="muted">You will be in good hands</span></h2>
@@ -71,7 +30,7 @@
                 </h3>
             </div>
         </li>
-    </ul>Bronz
+    </ul>
 </div>
 
 <hr class="featurette-divider" id="front-sponsors" ng-show="sponsors.length > 0">
@@ -80,7 +39,8 @@
     <ul class="thumbnails center">
         <li class="span4" ng-repeat="entry in sponsors">
             <div class="thumbnail" ng-class="{{entry.gsx$level.$t}}">
-                <a href="{{entry.gsx$url.$t}}/?utm_source=devconmru&utm_medium=banner&utm_campaign=sponsor" target="_blank"><img ng-src="images/sponsors/{{entry.gsx$image.$t}}" alt="{{entry.gsx$partner.$t}}" /></a>
+                <img ng-hide="entry.gsx$url.$t" ng-src="images/sponsors/{{entry.gsx$image.$t}}" alt="{{entry.gsx$partner.$t}}" />
+                <a ng-show="entry.gsx$url.$t" href="{{entry.gsx$url.$t}}/?utm_source=devconmru&utm_medium=banner&utm_campaign=sponsor" target="_blank"><img ng-src="images/sponsors/{{entry.gsx$image.$t}}" alt="{{entry.gsx$partner.$t}}" /></a>
                 <h3>{{entry.gsx$company.$t}}</h3>
                 <p>{{entry.gsx$slogan.$t}}</p>
             </div>
