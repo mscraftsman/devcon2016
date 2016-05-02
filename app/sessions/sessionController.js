@@ -9,7 +9,7 @@
     var controller = function ($scope, $stateParams, $state, $modal, sessionService) {
 
         $scope.scrollTo = false;
-        $scope.days = [{ id: 1, name: "Thursday" }, { id: 2, name: "Friday" }, { id: 3, name: "Saturday" }]
+        $scope.days = [{ id: 1, name: "Friday" }, { id: 2, name: "Saturday" }, { id: 3, name: "Sunday" }]
         $scope.entries = sessionService.entries;
         $scope.selected = {};
 

@@ -14,7 +14,7 @@
         var organisers = [];
 
         var getSpeakers = function (next) {
-            // https://spreadsheets.google.com/feeds/worksheets/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/private/full
+            // https://spreadsheets.google.com/feeds/worksheets/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/public/full
             var feedUrl = "https://spreadsheets.google.com/feeds/list/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/oyw720/public/values?alt=json&callback=JSON_CALLBACK";
             var feedList = [];
 
@@ -33,7 +33,6 @@
         };
 
         var getSponsors = function (next) {
-            // https://spreadsheets.google.com/feeds/worksheets/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/private/full
             var feedUrl = "https://spreadsheets.google.com/feeds/list/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/ogt46nu/public/values?alt=json&callback=JSON_CALLBACK";
             var feedList = [];
 
@@ -73,7 +72,6 @@
         };
 
         var getOrganisers = function (next) {
-            // https://spreadsheets.google.com/feeds/worksheets/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/private/full
             var feedUrl = "https://spreadsheets.google.com/feeds/list/1eGVUyO9U_JqSMqF2ZQSCyzRMAxOlplFGJ6L2uwfnoDw/oxe5fi5/public/values?alt=json&callback=JSON_CALLBACK";
             var feedList = [];
 
