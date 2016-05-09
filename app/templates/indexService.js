@@ -51,8 +51,8 @@
         };
 
         var getJobListings = function (next) {
-            // https://spreadsheets.google.com/feeds/worksheets/1DQCopSIi4sOvWUUEVOD8OlRCGbPikrxcZDdtdQdZYIw/private/full
-            var feedUrl = "https://spreadsheets.google.com/feeds/list/1DQCopSIi4sOvWUUEVOD8OlRCGbPikrxcZDdtdQdZYIw/orx9i5h/public/values?alt=json&callback=JSON_CALLBACK";
+            // https://spreadsheets.google.com/feeds/worksheets/101kaPStm71ubeSFoSiLyiHOvgESIE2tIA-cJsqHbjxE/public/full
+            var feedUrl = "https://spreadsheets.google.com/feeds/list/101kaPStm71ubeSFoSiLyiHOvgESIE2tIA-cJsqHbjxE/oe9z42b/public/values?alt=json&callback=JSON_CALLBACK";
             var feedList = [];
 
             $http.jsonp(feedUrl)
