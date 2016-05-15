@@ -9,13 +9,23 @@
     var controller = function ($scope, $stateParams, $state, $modal, sessionService) {
 
         $scope.scrollTo = false;
-        $scope.days = [{ id: 1, name: "Friday" }, { id: 2, name: "Saturday" }, { id: 3, name: "Sunday" }]
+        $scope.isExtra = false;
+        $scope.days = [
+            { id: 1, name: "Friday" },
+            { id: 2, name: "Saturday" },
+            { id: 3, name: "Sunday" },
+            { id: 4, name: 'MakerCon (Friday)' },
+            { id: 5, name: 'Linux InstallFest (Saturday)' }
+        ];
         $scope.entries = sessionService.entries;
         $scope.selected = {};
 
         var dayId = "1";
         if ($stateParams.dayId) {
             dayId = $stateParams.dayId;
+        }
+        if (Number(dayId) > 3) {
+            $scope.isExtra = true;
         }
         sessionService.getList(dayId);
 

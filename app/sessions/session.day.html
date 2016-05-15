@@ -2,9 +2,10 @@
     <thead>
         <tr class="list-item list-item-agenda">
             <td class="agenda-time">Time \ Room</td>
-            <td class="agenda-room">Educator 1</td>
-            <td class="agenda-room">Educator 2</td>
-            <td class="agenda-room">Accelerator</td>
+            <td class="agenda-room" ng-hide="isExtra">Educator 1</td>
+            <td class="agenda-room" ng-hide="isExtra">Educator 2</td>
+            <td class="agenda-room" ng-hide="isExtra">Accelerator</td>
+            <td class="agenda-room" ng-show="isExtra">Flying Dodo</td>
         </tr>
     </thead>
     <tbody>
