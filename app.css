@@ -1,4 +1,4 @@
-﻿/*
+/*
  * HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
@@ -602,7 +602,7 @@ h3.dialog {
 }
 
 .portlouis {
-    background: url(/img/portlouis.jpg) no-repeat center;
+    background: url(img/portlouis.jpg) no-repeat center;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -610,7 +610,7 @@ h3.dialog {
 }
 
 .voilahotel {
-    background: url(/img/voilahotel.jpg) no-repeat center;
+    background: url(img/voilahotel.jpg) no-repeat center;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -618,7 +618,7 @@ h3.dialog {
 }
 
 .flyingdodo {
-    background: url(/img/flyingdodo.jpg) no-repeat center;
+    background: url(img/flyingdodo.jpg) no-repeat center;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -828,11 +828,11 @@ span.language {
 }
 
     span.language.en {
-        background-image: url(../img/icon_en.png);
+        background-image: url(img/icon_en.png);
     }
 
     span.language.fr {
-        background-image: url(../img/icon_fr.png);
+        background-image: url(img/icon_fr.png);
     }
 
 /* line 69, ../../src/sass/screen.scss */
@@ -955,7 +955,7 @@ span.language {
     }
 
         .package ul li {
-            list-style-image: url(../img/li-tick.png);
+            list-style-image: url(img/li-tick.png);
             margin-left: 25px;
             margin-bottom: 8px;
             font-size: 13px;
@@ -963,7 +963,7 @@ span.language {
 
         
 ul.sponsor li {
-    list-style-image: url(../img/li-tick.png);
+    list-style-image: url(img/li-tick.png);
     margin-left: 25px;
     margin-bottom: 8px;
     font-size: 13px;
@@ -1225,8 +1225,10 @@ input::-moz-focus-inner {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media screen and (min-device-width: 401px) and (min-width: 401px) .portlouis {
-    background: url(/img/portlouis.jpg) no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover;
+@media screen and (min-device-width: 401px) and (min-width: 401px) {
+    .portlouis {
+        background: url(img/portlouis.jpg) no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover;
+    }
 }
 
 @media (min-width: 768px) {
@@ -1235,8 +1237,10 @@ input::-moz-focus-inner {
     }
 }
 
-@media (max-width: 1040px) .container-speaker .speaker {
-    -webkit-flex: 1 0 50%; flex: 1 0 50%;
+@media (max-width: 1040px) {
+    .container-speaker .speaker {
+        -webkit-flex: 1 0 50%; flex: 1 0 50%;
+    }
 }
 
 @media (max-width: 979px) {

@@ -1,4 +1,4 @@
-﻿require.config({
+require.config({
     urlArgs : 'bust=v1' + (new Date().getTime()),
     waitSeconds : 20, //make sure it is enough to load all scripts
     paths : {
@@ -36,6 +36,17 @@
         }
     }
 });
+
+if (typeof window !== 'undefined' && window.jQuery) {
+    define('jquery', [], function () {
+        return window.jQuery;
+    });
+    if (window.jQuery.fn && window.jQuery.fn.modal) {
+        define('bootstrap', ['jquery'], function ($) {
+            return $;
+        });
+    }
+}
 
 require([
 	'./namespace',

@@ -1,4 +1,4 @@
-﻿define([
+define([
     './module',
     './namespace'
 ], function (module, namespace) {
@@ -77,7 +77,7 @@
         };
 
         if (!modalOptions.controller) {
-            modalOptions.controller = function ($scope, $modalInstance) {
+            modalOptions.controller = ['$scope', '$modalInstance', function ($scope, $modalInstance) {
                 $scope.modalOptions = modalOptions;
                 $scope.ok = function (result) {
                     $modalInstance.close(result);
@@ -85,7 +85,7 @@
                 $scope.close = function (result) {
                     $modalInstance.dismiss('cancel');
                 };
-            }
+            }];
         }
 
         $scope.showDetails = function (entry) {
