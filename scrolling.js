@@ -1,4 +1,4 @@
-﻿
+
 $(function () {
     $(window).on("load resize", function () {
         $(".fill-screen").css("height", window.innerHeight);
@@ -11,11 +11,17 @@ $(function () {
     });
 
     // smooth scrolling
-    $('nav a, .down-button a').bind('click', function () {
-        $('html, body').stop().animate({
-            scrollTop: $($(this).attr('href')).offset().top - 100
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+    $(document).on('click', 'nav a, .down-button a', function (event) {
+        var href = $(this).attr('href');
+        if (href && href.charAt(0) === '#' && href.length > 1 && href.indexOf('/') === -1) {
+            var target = $(href);
+            if (target.length) {
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 100
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            }
+        }
     });
 
     // parallax scrolling with stellar.js

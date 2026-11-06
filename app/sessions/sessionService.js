@@ -1,4 +1,4 @@
-﻿define([
+define([
     './module',
     './namespace'
 ], function (module, namespace) {
@@ -35,15 +35,19 @@
 
                 $http.jsonp(feedUrl)
                     .success(function (data) {
-                        angular.forEach(data.feed.entry, function (entryX) {
-                            feedList.push(entryX);
-                        });
+                        if (data && data.feed && data.feed.entry) {
+                            angular.forEach(data.feed.entry, function (entryX) {
+                                feedList.push(entryX);
+                            });
+                        }
                         angular.copy(feedList, entries);
 
                         //next(data);
                     })
                     .error(function (data) {
-                        next({ error: true, data: data });
+                        if (typeof next === 'function') {
+                            next({ error: true, data: data });
+                        }
                     });
             },
             entries: entries
